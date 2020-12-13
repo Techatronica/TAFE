@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions</title>
+    <script>
+      const namesList = [];
+      let i = 0;
+      function addNames() {
+        const name = prompt("Enter a name", "Name");
+        namesList[i] = name;
+        console.log(name, i);
+      }
+
+      console.log(namesList);
+
+      function writeNames() {
+        // document.write("<li>" + namesList[i] + "</li>");
+
+        //Using template literals
+        document.write(`<li> ${namesList[i]} </li>`);
+      }
+
+      function outputNames() {
+        while (i < 5) {
+          addNames(i);
+          i++;
+        }
+        //The .sort(); method sorts the namesList into alphabetical order.
+        namesList.sort();
+        console.log(i);
+        //Needed to reset i=0; otherwise i=5 and writeNames(); wouldn't run due to i<5 condition.
+        i = 0;
+        console.log(i);
+        while (i < 5) {
+          writeNames(i);
+          i++;
+        }
+        // i=0; in the for loop resets the i value to 0 allowing the for loop to proceed.
+        //     for(i=0; i<5; i++){
+        //     writeNames(i);
+        // }
+        console.log(i);
+      }
+      console.log(i);
+      // for(i=0; i<5; i++){
+      //     addNames(i);
+      // }
+      // namesList.sort();
+
+      // for(i=0; i<5; i++){
+      //     writeNames(i);
+      // }
+
+      // const namesList = [];
+      // const names1 = prompt("Enter a name 1", "name");
+      // const names2 = prompt("Enter a name 2", "name");
+      // const names3 = prompt("Enter a name 3", "name");
+      // const names4 = prompt("Enter a name 4", "name");
+      // const names5 = prompt("Enter a name 5", "name");
+
+      // function listNames() {
+      //     namesList[0]=names1;
+      //     namesList[1]=names2;
+      //     namesList[2]=names3;
+      //     namesList[3]=names4;
+      //     namesList[4]=names5;
+      // };
+    </script>
+  </head>
+  <body>
+    <h1>
+      An App That Accepts 5 Names lists them and then lists them again in
+      alphabetical order.
+    </h1>
+    <script>
+      document.write("<ul>");
+      outputNames();
+      document.write("</ul>");
+      console.log(namesList);
+      // listNames();
+
+      //     document.write("<ul><li>" + namesList[0] + "</li>");
+      //     document.write("<li>" + namesList[1] + "</li>");
+      //     document.write("<li>" + namesList[2] + "</li>");
+      //     document.write("<li>" + namesList[3] + "</li>");
+      //     document.write("<li>" + namesList[4] + "</li></ul>");
+      //     namesList.sort();
+      //     document.write('Names list in alphabetical order<ul>');
+      //     document.write("<li>" + namesList[0] + "</li>");
+      //     document.write("<li>" + namesList[1] + "</li>");
+      //     document.write("<li>" + namesList[2] + "</li>");
+      //     document.write("<li>" + namesList[3] + "</li>");
+      //     document.write("<li>" + namesList[4] + "</li></ul>");
+    </script>
+  </body>
+</html>
+
+<!-- github repository address to store in remote repository-->
+<!-- https://github.com/Techatronica/TAFE.git -->
