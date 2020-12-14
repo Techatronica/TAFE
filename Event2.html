@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letting the user make things happen</title>
+    <script>
+      function changeColour(code) {
+        document.bgColor = code;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Colour changing buttons</h1>
+    <form>
+      <input
+        type="button"
+        name="Button1"
+        value="red"
+        onclick="changeColour('red')"
+      />
+      <input
+        type="button"
+        name="Button2"
+        value="green"
+        onclick="changeColour('green')"
+      />
+      <input
+        type="button"
+        name="Button3"
+        value="blue"
+        onclick="changeColour('blue')"
+      />
+      <input
+        type="button"
+        name="Button4"
+        value="white"
+        onclick="changeColour('white')"
+      />
+      <input
+        type="button"
+        name="Button5"
+        value="purple"
+        onclick="changeColour('purple')"
+      />
+    </form>
+  </body>
+</html>

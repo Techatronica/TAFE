@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculation Form</title>
+    <script>
+      function compute(f) {
+        f.result.value = eval(f.expression.value);
+
+        alert("Feel free to go again.");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Do a quick calculation</h1>
+
+    <form>
+      Enter an expression:<input type="text" name="expression" size="15" />
+
+      <input type="button" value="Calculate" onclick="compute(this.form)" />
+
+      <br />Result:<input type="text" name="result" id="result" size="15" />
+
+      <br /><input type="reset" value="Clear" />
+    </form>
+  </body>
+</html>
