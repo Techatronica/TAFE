@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Old Winery Sales</title>
+    <script>
+      function compute(f) {
+        f.elements[2].value = f.elements[0].value * f.elements[1].value;
+        //This also works! as it uses the name="" property of the input object.
+        // f.elements[2].value = f.Ruffred.value * f.Qty1.value;
+      }
+    </script>
+  </head>
+  <body onload="window.status='The grog shop'">
+    <h2 align="center">Welcome to Yourname's old wine Sales</h2>
+    <form>
+      <table border="0" width="80%">
+        <tr>
+          <td width="60%">
+            Enter the price for the Ruff Red delight (per case):
+          </td>
+          <td width="20%">
+            $
+            <input
+              type="text"
+              name="Ruffred"
+              value="25.00"
+              size="5"
+              maxlength="5"
+              onfocus="value='Be generous'"
+              onchange="alert('Dont get cheap now');"
+            />
+          </td>
+          <td width="20%" rowspan="2">
+            <!-- <img src="Wine.gif" align="right" /> -->
+          </td>
+        </tr>
+        <tr>
+          <td>Enter the number of cases to buy:</td>
+          <td>
+            &nbsp;
+            <input
+              type="text"
+              name="Qty1"
+              value=""
+              size="2"
+              maxlength="2"
+              onfocus="window.status='Buy a truck load'"
+              onblur="window.status='We will need to verify stock availability'"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>You will need to spend:</td>
+          <td>
+            $<input
+              type="text"
+              name="result"
+              size="10"
+              onmouseover="window.staus='Click on the calculate button'"
+              onmouseout="window.status='The grog shop'"
+            />
+          </td>
+          <td width="20%">
+            <!-- <img src="Dollar.gif" align="right" alt=" " /> -->
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <input
+              type="button"
+              value="Calculate"
+              onclick="compute(this.form)"
+            />
+            <input
+              type="reset"
+              value="Reset"
+              onmouseover="window.status='Clears the form'"
+              onmouseout="window.status='The grog shop'"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
