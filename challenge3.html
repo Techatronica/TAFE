@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      th {
+        font-size: x-large;
+        text-align: left;
+      }
+    </style>
+    <script>
+      const priceList = [];
+
+      priceList[0] = 15.5;
+      priceList[1] = 9.5;
+      priceList[2] = 2.75;
+      priceList[3] = 32.5;
+
+      console.log(priceList);
+
+      function compute(f) {
+        f.result.value =
+          f.elements[0].value * priceList[0] +
+          f.White.value * priceList[1] +
+          f.Champagne.value * priceList[2] +
+          f.Beer.value * priceList[3];
+      };
+
+    </script>
+  </head>
+  <body>
+    <h1 align="center">Welcome to Greg's old wine Sales</h1>
+    <form id="myForm">
+      <table border="0" width="80%">
+        <tr>
+          <th style="font-size: large">Grog you want</th>
+          <th style="font-size: large">Price per bottle or case</th>
+          <th style="font-size: large">The number you wanat to buy</th>
+        </tr>
+<!-- Used getElementById().innerHTML as document.write is depricated -->
+        <tr>
+          <td>Ruff Red</td>
+          <td align="center"id="Red" >
+              <script>
+                document.getElementById("Red").innerHTML =
+                priceList[0];
+              </script>
+            </td>
+          </td>
+          <td align="center">
+            <input type="text" name="Red" size="1" />
+          </td>
+        </tr>
+        <tr>
+          <td>Whimpy White</td>
+          <td align="center" id="White">
+            <script>
+              document.getElementById("White").innerHTML =
+              priceList[1];
+            </script>
+          </td>
+          <td align="center">
+            <input type="text" name="White" size="1" />
+          </td>
+        </tr>
+        <tr>
+          <td>Chunder Champagne</td>
+          <td align="center" id="Champagne">
+            <script>
+              document.getElementById("Champagne").innerHTML =
+              priceList[2];
+            </script>
+          </td>
+          <td align="center">
+            <input type="text" name="Champagne" size="1" />
+          </td>
+        </tr>
+        <tr>
+          <td>Burley Beer</td>
+          <td align="center" id="Beer">
+            <script>
+              document.getElementById("Beer").innerHTML =
+              priceList[3];
+            </script>
+          </td>
+          <td align="center">
+            <input type="text" name="Beer" id="Beer" size="1" />
+          </td>
+        </tr>
+        <tr>
+          <td>You will need to spend:</td>
+          <td colspan="2" align="center">
+            $<input type="text" name="result" id="result" size="10" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              value="Calculate"
+              onclick="compute(this.form)"
+            />
+            <input
+              type="reset"
+              value="Reset"
+              onmouseover="window.status='Clears the form'"
+              onmouseout="window.status='The grog shop'"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      const formLength = document.getElementById("myForm").elements.length;
+        console.log(formLength);
+    </script>
+  </body>
+</html>
